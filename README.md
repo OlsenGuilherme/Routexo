@@ -101,3 +101,5 @@ Tudo isso foi envelopado em uma interface nostálgica focada em produtividade (e
 * **Banco de Dados**: Supabase (PostgreSQL) e Redis
 * **Inteligência Artificial**: Google Gemini 2.5 Flash
 * **Segurança**: Cloudflare Turnstile e bcryptjs
+
+Desenvolvido por Guilherme Olsen ®
