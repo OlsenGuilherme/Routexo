@@ -10,7 +10,7 @@ function verificarAdmin(request: NextRequest): { ok: boolean; detail: string } {
   if (token !== adminToken) return { ok: false, detail: "Token incorreto." };
   return { ok: true, detail: "" };
 }
-
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
 /** GET /api/admin/usuarios — Lista todos os usuários */
 export async function GET(request: NextRequest) {
   const auth = verificarAdmin(request);
