@@ -50,11 +50,11 @@ VEÍCULO ${i}: [Nome da Região]
     const prompt = `
 Você é um especialista em logística e roteirização de frotas urbanas.
 
-Sua tarefa é otimizar a divisão e o percurso de entregas para ${vehicleCount} veículo(s), maximizando eficiência de tempo, combustível e organização regional.
+Sua tarefa é otimizar a divisão e o percurso de entregas para \${vehicleCount} veículo(s), maximizando eficiência de tempo, combustível e organização regional.
 
 CONTEXTO DE PARTIDA:
 Todos os veículos iniciarão a rota simultaneamente a partir deste ponto:
-${origin}
+\${origin}
 
 DADOS RECEBIDOS:
 Estou enviando uma imagem contendo uma lista de clientes e endereços.
@@ -74,10 +74,10 @@ REGRAS DE ROTEIRIZAÇÃO:
 NORMALIZAÇÃO OBRIGATÓRIA DE ENDEREÇOS (CRÍTICO PARA GOOGLE MAPS):
 O endereço gerado DEVE funcionar corretamente no Google Maps. Siga TODAS as regras abaixo:
 
-FORMATO OBRIGATÓRIO: [Logradouro], [Número], [Cidade], [UF], Brasil
-- Sempre inclua cidade, UF (sigla do estado) e Brasil.
-- Nunca omita vírgulas entre logradouro, número, cidade, UF e Brasil.
-- UF pode ser RS, PR, SC, SP, MG, RJ ou qualquer estado brasileiro.
+FORMATO OBRIGATÓRIO: [Rua/Avenida], [Número], [Bairro], [Cidade], [UF], Brasil
+- Sempre inclua rua/avenida, número, bairro, cidade, UF (sigla do estado) e Brasil.
+- Nunca omita vírgulas entre rua/avenida, número, bairro, cidade, UF e Brasil.
+- UF deve ser sempre a sigla de duas letras correspondente ao estado brasileiro.
 
 LIMPEZA OBRIGATÓRIA — REMOVA SEMPRE:
 - Complementos como: COND, CONDOMÍNIO, LOJA, LOJA X, LJ, TÉRREO, TERREO, BLOCO, BL, ANDAR, APTO, APT, SALA, CASA, DEPÓSITO, GALPÃO
@@ -87,37 +87,31 @@ LIMPEZA OBRIGATÓRIA — REMOVA SEMPRE:
 
 RODOVIAS — ATENÇÃO:
 - Nunca escreva apenas ", Km X" sem o nome da rodovia antes.
-- Correto: Rodovia BR-376, Km 23,5, São José dos Pinhais, PR, Brasil
-- Errado: , Km 23,5, São José dos Pinhais, PR, Brasil
-- Use hífen: BR-376, BR-101, BR-116 (nunca "BR 376" sem hífen)
+- Correto: Rodovia [Identificação da Rodovia], Km [Número], [Bairro], [Cidade], [UF], Brasil
+- Errado: , Km [Número], [Cidade], [UF], Brasil
+- Use hífen para a sigla da rodovia (ex: BR-XXX, SP-XXX)
 
 EXEMPLOS DE NORMALIZAÇÃO:
-Entrada: AV FERNANDES BASTOS 1927 TRAMANDAI SAO JOSE
-Saída: Av. Fernandes Bastos, 1927, São José, Tramandaí, RS, Brasil
+Entrada: AV [NOME DA VIA] [NÚMERO] [CIDADE] [BAIRRO]
+Saída: [Rua/Avenida], [Número], [Bairro], [Cidade], [UF], Brasil
 
-Entrada: 10A AVENIDA BEIRA MAR 2909 TRAMANDAI ZONA NOVA
-Saída: Avenida Beira Mar, 2909, Zona Nova, Tramandaí, RS, Brasil
+Entrada: [NÚMERO CONTEXTUAL] AVENIDA [NOME DA VIA] [NÚMERO] [CIDADE] [BAIRRO]
+Saída: [Rua/Avenida], [Número], [Bairro], [Cidade], [UF], Brasil
 
-Entrada: RUA GENERAL OSORIO 583 CAPAO DA CANOA SANTA LUZIA
-Saída: Rua General Osório, 583, Santa Luzia, Capão da Canoa, RS, Brasil
+Entrada: RUA [NOME DA VIA] [NÚMERO] [CIDADE] [BAIRRO]
+Saída: [Rua/Avenida], [Número], [Bairro], [Cidade], [UF], Brasil
 
-Entrada: ROD BR 376 KM 23,5 SAO JOSE DOS PINHAIS
-Saída: Rodovia BR-376, Km 23,5, São José dos Pinhais, PR, Brasil
+Entrada: ROD [SIGLA DA RODOVIA] KM [NÚMERO] [CIDADE] [BAIRRO]
+Saída: Rodovia [Identificação da Rodovia], Km [Número], [Bairro], [Cidade], [UF], Brasil
 
-Entrada: AV MARECHAL FLORIANO 2765 BLOCO B LOJA 3 CURITIBA CENTRO
-Saída: Av. Marechal Floriano, 2765, Curitiba, PR, Brasil
+Entrada: AV [NOME DA VIA] [NÚMERO] BLOCO [X] LOJA [Y] [CIDADE] [BAIRRO]
+Saída: [Rua/Avenida], [Número], [Bairro], [Cidade], [UF], Brasil
 
-Entrada: BR-116 SN CURITIBA CEASA TATUQUARA
-Saída: Rodovia BR-116, S/N, Tatuquara, Curitiba, PR, Brasil
-
-Entrada: R PEDRO BUHRER 1375 SAO JOSE DOS PINHAIS PR
-Saída: Rua Pedro Buhrer, 1375, São José dos Pinhais, PR, Brasil
-
-Entrada: RUA JOSE LOUREIRO 274 CENTRO CURITIBA
-Saída: Rua José Loureiro, 274, Centro, Curitiba, PR, Brasil
+Entrada: [SIGLA DA RODOVIA] SN [CIDADE] [CONTEÚDO REMOVÍVEL] [BAIRRO]
+Saída: Rodovia [Identificação da Rodovia], S/N, [Bairro], [Cidade], [UF], Brasil
 
 FORMATO OBRIGATÓRIO DA RESPOSTA:
-${vehicleOutputFormat}
+\${vehicleOutputFormat}
 `;
 
     /** <!-- Desenvolvido por Guilherme Olsen ® --> */
