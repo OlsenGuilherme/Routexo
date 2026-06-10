@@ -82,3 +82,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Erro interno no servidor durante a criação de conta." }, { status: 500 });
   }
 }
+
+
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
