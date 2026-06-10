@@ -1,7 +1,7 @@
 /**
  * lib/db.ts
  * Helper centralizado para acesso ao Supabase (PostgreSQL).
- * Usa service_role key para contornar RLS nas operações do servidor.
+ * Usa service_role key para contornar RLS nas operações do servidor. ( <!-- Desenvolvido por Guilherme Olsen ® --> )
  */
 import { createClient } from "@supabase/supabase-js";
 
@@ -153,3 +153,6 @@ export async function listarLogs(limite = 100): Promise<LogAcesso[]> {
     ip: row.ip,
   }));
 }
+
+
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
