@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = (await request.json()) as RegisterRequestBody;
     const { usuario, senha, turnstileToken } = body;
-
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
     // 1. Validações básicas
     if (!usuario?.trim() || !senha?.trim()) {
       return NextResponse.json({ error: "Usuário e senha são obrigatórios." }, { status: 400 });
