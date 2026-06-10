@@ -1,0 +1,331 @@
+@import "tailwindcss";
+
+:root {
+  --erp-blue: #0b78b6;
+  --erp-blue-dark: #075f91;
+  --erp-blue-light: #dff2ff;
+
+  --erp-bg: #d7dce2;
+  --erp-panel: #f4f6f8;
+  --erp-panel-soft: #eef1f4;
+
+  --erp-border: #8b98a7;
+  --erp-border-dark: #596575;
+
+  --erp-text: #111827;
+  --erp-muted: #475569;
+
+  --erp-green: #008a3d;
+  --erp-red: #c1121f;
+  --erp-yellow: #fff3bf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), transparent 35%),
+    linear-gradient(45deg, rgba(0, 0, 0, 0.05), transparent 40%),
+    var(--erp-bg);
+  color: var(--erp-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.erp-window {
+  border: 1px solid var(--erp-border-dark);
+  background: var(--erp-panel);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.erp-titlebar {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #1391d0, var(--erp-blue));
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--erp-blue-dark);
+  letter-spacing: 0.2px;
+}
+
+.erp-subtitlebar {
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+  background: linear-gradient(to bottom, #1d8dca, #0b78b6);
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  border-bottom: 1px solid var(--erp-blue-dark);
+}
+
+.erp-panel {
+  border: 1px solid var(--erp-border);
+  background: var(--erp-panel);
+}
+
+.erp-panel-body {
+  padding: 6px;
+}
+
+.erp-field-label {
+  display: block;
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+
+.erp-input,
+.erp-select {
+  width: 100%;
+  height: 23px;
+  border: 1px solid #8b98a7;
+  background: white;
+  color: #111827;
+  padding: 2px 5px;
+  outline: none;
+  font-size: 12px;
+}
+
+.erp-input:focus,
+.erp-select:focus {
+  border-color: #0b78b6;
+  box-shadow: 0 0 0 1px rgba(11, 120, 182, 0.25);
+}
+
+.erp-button {
+  min-height: 24px;
+  border: 1px solid #56616f;
+  background: linear-gradient(to bottom, #ffffff, #d7dde5);
+  color: #111827;
+  font-weight: 700;
+  padding: 3px 10px;
+}
+
+.erp-button:hover {
+  background: linear-gradient(to bottom, #ffffff, #c8d2dc);
+}
+
+.erp-button-primary {
+  min-height: 24px;
+  border: 1px solid #064f7a;
+  background: linear-gradient(to bottom, #2aa7e0, #0b78b6);
+  color: white;
+  font-weight: 700;
+  padding: 3px 10px;
+}
+
+.erp-button-primary:hover {
+  background: linear-gradient(to bottom, #32b5ef, #086ba3);
+}
+
+.erp-button-danger {
+  min-height: 24px;
+  border: 1px solid #8f1018;
+  background: linear-gradient(to bottom, #e23b45, #b3131e);
+  color: white;
+  font-weight: 700;
+  padding: 3px 10px;
+}
+
+.erp-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 11px;
+}
+
+.erp-table th {
+  height: 20px;
+  background: linear-gradient(to bottom, #eef7ff, #c8e7fa);
+  color: #0f172a;
+  border: 1px solid #8b98a7;
+  padding: 2px 4px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.erp-table td {
+  height: 19px;
+  border: 1px solid #b8c0ca;
+  padding: 2px 4px;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.erp-table tr:nth-child(even) td {
+  background: #f7f9fb;
+}
+
+.erp-table tr:hover td {
+  background: #fff3bf;
+}
+
+.erp-statusbar {
+  min-height: 24px;
+  border-top: 1px solid var(--erp-border-dark);
+  background: linear-gradient(to bottom, #e7ebef, #cbd3dc);
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 3px 8px;
+  font-size: 11px;
+}
+
+.erp-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-bottom: 1px solid var(--erp-border);
+  background: linear-gradient(to bottom, #f8fafc, #dce3ea);
+}
+
+.erp-icon-button {
+  width: 26px;
+  height: 24px;
+  border: 1px solid #8b98a7;
+  background: linear-gradient(to bottom, #ffffff, #d7dde5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b78b6;
+  font-weight: 700;
+}
+
+.erp-icon-button:hover {
+  background: #dff2ff;
+}
+
+.erp-scroll {
+  overflow: auto;
+}
+
+.erp-small {
+  font-size: 11px;
+}
+
+.erp-muted {
+  color: var(--erp-muted);
+}
+
+.erp-chip {
+  border: 1px solid #8b98a7;
+  background: #eef1f4;
+  padding: 2px 6px;
+  font-size: 11px;
+}
+
+.erp-chip-green {
+  border-color: #008a3d;
+  background: #d9fbe7;
+  color: #006b2f;
+}
+
+.erp-chip-blue {
+  border-color: #0b78b6;
+  background: #dff2ff;
+  color: #075f91;
+}
+
+/* ──────────────────────────────────────────────
+   CSS DE IMPRESSÃO — Imprimir OE
+   Oculta navegação e UI, exibe apenas o conteúdo
+   da Ordem de Embarque de forma limpa.
+────────────────────────────────────────────── */
+@media print {
+  /* Oculta tudo por padrão */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Exibe apenas a seção de pedidos da OE e a tabela de clientes */
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 16px;
+  }
+
+  /* Oculta botões e controles dentro da área de impressão */
+  .print-area button,
+  .print-area input[type="checkbox"],
+  .print-area .erp-toolbar,
+  .print-area .no-print {
+    display: none !important;
+  }
+
+  /* Garante que tabelas quebrem página corretamente */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #333 !important;
+    padding: 4px 6px !important;
+    font-size: 10px !important;
+    color: #000 !important;
+  }
+
+  thead {
+    background: #e0e0e0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Destaque amarelo mantido na impressão */
+  tr[style*="FFFDE7"] td {
+    background: #FFFDE7 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Cabeçalho da OE */
+  .print-header {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+  }
+
+  /* Não quebrar linhas de tabela no meio da página */
+  tr {
+    page-break-inside: avoid;
+  }
+}
