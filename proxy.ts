@@ -35,7 +35,9 @@ export function proxy(request: NextRequest) {
 // Executar em todas as páginas exceto arquivos estáticos e imagens
 export const config = {
   matcher: [
+    
     "/((?!_next/static|_next/image|favicon.ico|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.svg|.*\\.ico).*)",
   ],
 };
 
+<!-- Desenvolvido por Guilherme Olsen ® -->
