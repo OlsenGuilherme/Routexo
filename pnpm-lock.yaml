@@ -58,6 +58,9 @@ importers:
         specifier: ^5
         version: 5.9.3
 
+
+<!-- Desenvolvido por Guilherme Olsen ® -->
+
 packages:
 
   '@alloc/quick-lru@5.2.0':
@@ -792,7 +795,9 @@ packages:
     resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-
+    
+<!-- Desenvolvido por Guilherme Olsen ® -->
+  
   ajv@6.15.0:
     resolution: {integrity: sha512-fgFx7Hfoq60ytK2c7DhnF8jIvzYgOMxfugjLOSMHjLIPgenqa7S7oaagATUq99mV6IYvN2tRmC0wnTYX6iPbMw==}
 
@@ -4254,3 +4259,6 @@ snapshots:
       zod: 4.4.3
 
   zod@4.4.3: {}
+
+
+<!-- Desenvolvido por Guilherme Olsen ® -->
