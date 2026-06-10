@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
     
     // Deleta o cookie de autenticação
     cookieStore.delete("auth_token");
-
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
     // Também podemos expirar explicitamente para garantir que seja limpo em todos os browsers
     cookieStore.set("auth_token", "", {
       httpOnly: true,
