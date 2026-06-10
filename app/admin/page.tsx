@@ -558,3 +558,6 @@ export default function AdminPage() {
     </main>
   );
 }
+
+
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
