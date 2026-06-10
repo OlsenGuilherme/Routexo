@@ -150,3 +150,7 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
+
+
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
