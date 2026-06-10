@@ -3,7 +3,9 @@
  * Helper centralizado para acesso ao Redis usando ioredis.
  * Usa a variável REDIS_URL fornecida pelo Vercel Storage.
  * Formato: redis://default:SENHA@HOST:PORT
+ /** <!-- Desenvolvido por Guilherme Olsen ® --> 
  */
+
 import Redis from "ioredis";
 
 // Singleton: reutiliza a conexão entre chamadas serverless
@@ -107,3 +109,6 @@ export async function listarLogs(limite = 100): Promise<LogAcesso[]> {
   if (!raw) return [];
   return raw.map((v) => JSON.parse(v) as LogAcesso);
 }
+
+
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
