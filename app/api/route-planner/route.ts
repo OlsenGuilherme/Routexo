@@ -46,6 +46,7 @@ VEÍCULO ${i}: [Nome da Região]
 `;
 }
 
+    /** <!-- Desenvolvido por Guilherme Olsen ® --> */
     const prompt = `
 Você é um especialista em logística e roteirização de frotas urbanas.
 
@@ -119,6 +120,8 @@ FORMATO OBRIGATÓRIO DA RESPOSTA:
 ${vehicleOutputFormat}
 `;
 
+    /** <!-- Desenvolvido por Guilherme Olsen ® --> */
+    
     const cleanBase64 = imageBase64.includes(",")
       ? imageBase64.split(",")[1]
       : imageBase64;
@@ -222,3 +225,6 @@ ${vehicleOutputFormat}
     );
   }
 }
+
+
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
