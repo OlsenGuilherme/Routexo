@@ -44,3 +44,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
