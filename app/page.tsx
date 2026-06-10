@@ -1,5 +1,7 @@
 "use client";
 
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
+
 import { useMemo, useRef, useState } from "react";
 
 type RouteMapUrl = {
@@ -1286,3 +1288,6 @@ export default function Home() {
     </main>
   );
 }
+
+
+/** <!-- Desenvolvido por Guilherme Olsen ® --> */
