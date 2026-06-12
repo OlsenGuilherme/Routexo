@@ -6,12 +6,12 @@ Utilizando Inteligência Artificial avançada, o sistema extrai dados de entrega
 
 ---
 
-## 🍰 Receita de Bolo: Como rodar o projeto na sua máquina
+## Como rodar o projeto na sua máquina
 
 Aqui está o passo a passo simples e objetivo para você preparar esse projeto no seu próprio computador!
 
-### 🛒 Ingredientes (Pré-requisitos)
-Antes de colocar a mão na massa, certifique-se de ter os seguintes itens na sua despensa:
+## Pré-requisitos
+Certifique-se de ter os seguintes itens:
 1. **Node.js** (versão 20 ou superior): [Baixe aqui](https://nodejs.org/).
 2. **Gerenciador de pacotes**: Recomendamos usar o `pnpm` (mas o `npm` também serve).
 3. **Git**: Para baixar o código para a sua máquina.
@@ -20,23 +20,23 @@ Antes de colocar a mão na massa, certifique-se de ter os seguintes itens na sua
    - [Google AI Studio](https://aistudio.google.com/) (para a IA do Gemini)
    - [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/) (para a proteção CAPTCHA)
 
-### 🥣 Modo de Preparo
+### 🥣    Executando
 
-**Passo 1: Preparando a fôrma (Clonando o repositório)**
+**Passo 1: Clonando o repositório
 Abra o seu terminal e digite os comandos abaixo para baixar o projeto e entrar na pasta:
 ```bash
 git clone <URL_DO_SEU_REPOSITORIO>
 cd Roteirizacao-main
 ```
 
-**Passo 2: Misturando os ingredientes (Instalando dependências)**
+**Passo 2: Instalando dependências
 Agora, vamos instalar todos os pacotes necessários. No terminal, execute:
 ```bash
 pnpm install
 # ou use "npm install" caso prefira
 ```
 
-**Passo 3: Adicionando os temperos secretos (Variáveis de Ambiente)**
+**Passo 3: Variáveis de Ambiente
 Crie um arquivo chamado `.env.local` na raiz do projeto (na mesma pasta do `package.json`). Copie o conteúdo abaixo e cole no arquivo, substituindo os valores pelas suas chaves reais:
 
 ```env
@@ -62,7 +62,7 @@ LOGIN_SENHA=<SENHA_ADMIN>
 ```
 > ⚠️ **Atenção:** Nunca publique esse arquivo na internet. Ele contém os segredos do seu aplicativo!
 
-**Passo 4: Assando o bolo (Rodando o servidor)**
+**Passo 4: Rodando o servidor
 Tudo pronto! Para ligar o sistema no modo de desenvolvimento, digite:
 ```bash
 pnpm dev
@@ -80,9 +80,9 @@ pnpm start
 
 ## 💡 Por que este projeto foi criado?
 
-O **ROUTEXO** nasceu da necessidade de **simplificar e democratizar a logística inteligente** para pequenas e médias transportadoras ou frotas comerciais. 
+O **ROUTEXO** é um sistema web moderno e responsivo, projetado para otimização de frotas e roteirização urbana automática.
 
-Muitas dessas empresas ainda dependem de processos extremamente manuais: motoristas recebem papéis impressos (romaneios), precisam digitar endereço por endereço no celular e tentar adivinhar qual é o melhor caminho a seguir. Isso causa uma enorme perda de tempo e gasto desnecessário com combustível devido a rotas ineficientes (o famoso "zigue-zague" pela cidade).
+Utilizando Inteligência Artificial avançada, o sistema extrai dados de entregas a partir de imagens de romaneios ou relatórios, normaliza os endereços para os padrões aceitos pelas APIs de mapas, divide-os eficientemente de forma geográfica entre os veículos da frota e gera itinerários sequenciados prontos para uso no Google Maps.
 
 Criamos este projeto para resolver dores específicas:
 1. **Automação do Planejamento:** Em vez de digitar, o usuário tira uma foto ou faz upload da lista de entregas. A Inteligência Artificial faz a leitura, extrai os endereços, limpa informações desnecessárias (como "apto", "loja", "referência") e padroniza tudo perfeitamente para o Google Maps.
