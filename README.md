@@ -1,8 +1,17 @@
 # 🚚 ROUTEXO — Sistema de Roteirização Inteligente
 
-O **ROUTEXO** é um sistema web moderno e responsivo no estilo painel ERP (Enterprise Resource Planning), projetado para otimização de frotas e roteirização urbana automática. 
+## 💡 Por que este projeto foi criado?
+
+O **ROUTEXO** é um sistema web moderno e responsivo, projetado para otimização de frotas e roteirização urbana automática.
 
 Utilizando Inteligência Artificial avançada, o sistema extrai dados de entregas a partir de imagens de romaneios ou relatórios, normaliza os endereços para os padrões aceitos pelas APIs de mapas, divide-os eficientemente de forma geográfica entre os veículos da frota e gera itinerários sequenciados prontos para uso no Google Maps.
+
+Criamos este projeto para resolver dores específicas:
+1. **Automação do Planejamento:** Em vez de digitar, o usuário tira uma foto ou faz upload da lista de entregas. A Inteligência Artificial faz a leitura, extrai os endereços, limpa informações desnecessárias (como "apto", "loja", "referência") e padroniza tudo perfeitamente para o Google Maps.
+2. **Divisão Geográfica Inteligente:** Se você tem 100 entregas e 3 veículos, como dividir isso de forma justa e otimizada? O sistema entende as regiões e agrupa as entregas, alocando blocos lógicos para cada veículo.
+3. **Eficiência e Economia:** Rotas bem planejadas reduzem o tempo da frota na rua, cortam custos com gasolina e evitam o desgaste dos motoristas.
+
+Tudo isso foi envelopado em uma interface nostálgica focada em produtividade (estilo ERP clássico), oferecendo uma ferramenta poderosa, rápida e sem distrações visuais para quem trabalha na operação do dia a dia.
 
 ---
 
@@ -76,22 +85,6 @@ pnpm build
 pnpm start
 ```
 
----
-
-## 💡 Por que este projeto foi criado?
-
-O **ROUTEXO** é um sistema web moderno e responsivo, projetado para otimização de frotas e roteirização urbana automática.
-
-Utilizando Inteligência Artificial avançada, o sistema extrai dados de entregas a partir de imagens de romaneios ou relatórios, normaliza os endereços para os padrões aceitos pelas APIs de mapas, divide-os eficientemente de forma geográfica entre os veículos da frota e gera itinerários sequenciados prontos para uso no Google Maps.
-
-Criamos este projeto para resolver dores específicas:
-1. **Automação do Planejamento:** Em vez de digitar, o usuário tira uma foto ou faz upload da lista de entregas. A Inteligência Artificial faz a leitura, extrai os endereços, limpa informações desnecessárias (como "apto", "loja", "referência") e padroniza tudo perfeitamente para o Google Maps.
-2. **Divisão Geográfica Inteligente:** Se você tem 100 entregas e 3 veículos, como dividir isso de forma justa e otimizada? O sistema entende as regiões e agrupa as entregas, alocando blocos lógicos para cada veículo.
-3. **Eficiência e Economia:** Rotas bem planejadas reduzem o tempo da frota na rua, cortam custos com gasolina e evitam o desgaste dos motoristas.
-
-Tudo isso foi envelopado em uma interface nostálgica focada em produtividade (estilo ERP clássico), oferecendo uma ferramenta poderosa, rápida e sem distrações visuais para quem trabalha na operação do dia a dia.
-
----
 
 ## 🛠️ Pilha de Tecnologia (Tech Stack)
 
